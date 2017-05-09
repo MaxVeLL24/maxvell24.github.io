@@ -8,12 +8,48 @@
   transition: 500ms; }
   * div.container {
     margin: 0 auto;
-    min-width: 1600px;
+    width: 100%;
     max-width: 1600px;
     padding: 0;
     overflow: hidden; }
+    @media only screen and (min-width: 1600px) {
+      * div.container {
+        width: 100%;
+        max-width: 1600px; } }
+    @media only screen and (max-width: 1440px) {
+      * div.container {
+        width: 100%;
+        max-width: 1440px; } }
+    @media only screen and (min-width: 1200px) {
+      * div.container {
+        width: 100%; } }
+    @media only screen and (max-width: 1024px) {
+      * div.container {
+        width: 100%;
+        max-width: 1024px; } }
+    @media only screen and (max-width: 768px) {
+      * div.container {
+        width: 100%;
+        max-width: 768px; } }
+    @media only screen and (max-width: 768px) {
+      * div.container {
+        width: 100%;
+        max-width: 768px; } }
+    @media only screen and (max-width: 425px) {
+      * div.container {
+        width: 100%;
+        max-width: 425px; } }
+    @media only screen and (max-width: 375px) {
+      * div.container {
+        width: 100%;
+        max-width: 375px; } }
+    @media only screen and (max-width: 320px) {
+      * div.container {
+        width: 100%;
+        max-width: 320px; } }
     * div.container header {
       background: url("../img/Header.png");
+      background-size: cover;
       height: 800px; }
       * div.container header nav {
         background-color: #0e2c2a;
@@ -27,12 +63,29 @@
         -ms-flex-pack: justify;
         justify-content: space-between;
         box-shadow: 0px 10px 23px -6px rgba(0, 0, 0, 0.53); }
+        @media only screen and (max-width: 425px) {
+          * div.container header nav {
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            height: auto; } }
         * div.container header nav div.navigation {
           margin-left: 215px;
           margin-bottom: 20px;
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex; }
+          @media only screen and (max-width: 1024px) {
+            * div.container header nav div.navigation {
+              margin-left: 50px; } }
+          @media only screen and (max-width: 768px) {
+            * div.container header nav div.navigation {
+              margin-left: 5px; } }
+          @media only screen and (max-width: 425px) {
+            * div.container header nav div.navigation {
+              margin: 0 auto;
+              display: block;
+              padding-bottom: 15px; } }
           * div.container header nav div.navigation div.logo {
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
@@ -43,6 +96,10 @@
             position: relative;
             top: 20px;
             transition: 300ms; }
+            @media only screen and (max-width: 425px) {
+              * div.container header nav div.navigation div.logo {
+                margin: 0 auto;
+                top: 0; } }
           * div.container header nav div.navigation div.logo:hover {
             -webkit-transform: scale(1.1, 1.1);
             -ms-transform: scale(1.1, 1.1);
@@ -59,11 +116,25 @@
             border-left: 1px solid #154357;
             font-family: 'Open Sans', sans-serif;
             font-weight: 300; }
+            @media only screen and (max-width: 425px) {
+              * div.container header nav div.navigation input[type=search] {
+                display: block;
+                top: 0;
+                margin-top: 10px; } }
           * div.container header nav div.navigation input[type=search]:focus {
             outline: none; }
         * div.container header nav div.nav-menu {
           position: relative;
           right: 215px; }
+          @media only screen and (max-width: 1024px) {
+            * div.container header nav div.nav-menu {
+              right: 50px; } }
+          @media only screen and (max-width: 768px) {
+            * div.container header nav div.nav-menu {
+              right: 15px; } }
+          @media only screen and (max-width: 425px) {
+            * div.container header nav div.nav-menu {
+              right: 0; } }
           * div.container header nav div.nav-menu ul.menu {
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -78,8 +149,19 @@
             list-style-type: none;
             height: 100%;
             margin: 0; }
+            @media only screen and (max-width: 425px) {
+              * div.container header nav div.nav-menu ul.menu {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 100%;
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray; } }
             * div.container header nav div.nav-menu ul.menu li {
               width: 20%; }
+              @media only screen and (max-width: 425px) {
+                * div.container header nav div.nav-menu ul.menu li {
+                  width: 100%; } }
               * div.container header nav div.nav-menu ul.menu li a {
                 padding-top: 23px;
                 display: block;
@@ -91,6 +173,9 @@
                 transition: 300ms; }
               * div.container header nav div.nav-menu ul.menu li a:hover {
                 border-bottom: 1px solid #0fdb94; }
+                @media only screen and (max-width: 425px) {
+                  * div.container header nav div.nav-menu ul.menu li a:hover {
+                    color: #0eb493; } }
               * div.container header nav div.nav-menu ul.menu li a.active {
                 background-color: rgba(254, 254, 254, 0.2); }
       * div.container header div.header-title {
@@ -386,3 +471,17 @@
           -ms-transform: scale(1.015, 1.015);
           transform: scale(1.015, 1.015);
           box-shadow: 0px 0px 28px -2px #111412; }
+    * div.container footer {
+      background-color: #1ea78d;
+      height: 400px;
+      z-index: 2;
+      position: relative; }
+      * div.container footer div.footer-contain {
+        position: absolute;
+        top: 75px;
+        left: 215px;
+        right: 215px;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 26pt; }
